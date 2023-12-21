@@ -124,7 +124,7 @@ body {
 #planner li{
     list-style-type: none;
     font-size: 1.4rem;
-    text-transform: capitalize; /* Primeira letra maiuscula */
+    text-transform: uppercase; /* Primeira letra maiuscula */
     display: flex;
     align-items: center;
     justify-content: space-between;

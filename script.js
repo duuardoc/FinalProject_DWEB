@@ -59,24 +59,10 @@ function handleKeyPress(event)
     }
 }
 
-function editUserName() 
-{
-    // Obtem o nome de usuario atual
-    const currentUserName = document.getElementById('userName').innerText;
-
-    // Solicita ao usuario para inserir um novo nome de usuario
-    const newUserName = prompt('Insira seu novo nome de usuário:', currentUserName);
-
-    // Atualiza o nome de usuário se o usuário inserir um novo nome
-    if (newUserName !== null) {
-        document.getElementById('userName').innerText = newUserName;
-    }
-}
-
 function validateNewTask() // analisa se a nova tarefa ja existe no planner
 {
     let storedTasks = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
-    let inputValue  = document.getElementById('new_task').value;
+    let inputValue = document.getElementById('new_task').value.toLowerCase();
 
     let exists      = storedTasks.find( x => x.name == inputValue);
 
